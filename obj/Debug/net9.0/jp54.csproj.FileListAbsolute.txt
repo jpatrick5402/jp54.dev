@@ -77,3 +77,4 @@
 /home/jpatrick5402/Code/jp54/obj/Debug/net9.0/jp54.pdb
 /home/jpatrick5402/Code/jp54/obj/Debug/net9.0/jp54.genruntimeconfig.cache
 /home/jpatrick5402/Code/jp54/obj/Debug/net9.0/ref/jp54.dll
+/home/jpatrick5402/Code/jp54/obj/Debug/net9.0/jp54.sourcelink.json
