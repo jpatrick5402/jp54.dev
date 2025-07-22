@@ -1,7 +1,0 @@
-/home/jpatrick5402/Code/jp54/bin/Release/net9.0/publish/jp54
-/home/jpatrick5402/Code/jp54/bin/Release/net9.0/publish/appsettings.Development.json
-/home/jpatrick5402/Code/jp54/bin/Release/net9.0/publish/appsettings.json
-/home/jpatrick5402/Code/jp54/bin/Release/net9.0/publish/jp54.dll
-/home/jpatrick5402/Code/jp54/bin/Release/net9.0/publish/jp54.deps.json
-/home/jpatrick5402/Code/jp54/bin/Release/net9.0/publish/jp54.runtimeconfig.json
-/home/jpatrick5402/Code/jp54/bin/Release/net9.0/publish/jp54.pdb
