@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #020A10;
     --foreground: #ededed;
     --video-brightness: 50%;
   }
