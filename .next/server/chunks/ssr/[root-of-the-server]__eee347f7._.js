@@ -1,0 +1,3 @@
+module.exports=[56464,a=>{a.v({className:"jetbrains_mono_2eb74f70-module__NkDe5W__className"})},33290,a=>{"use strict";a.s(["default",()=>f,"metadata",()=>e],33290);var b=a.i(7997),c=a.i(56464);let d={className:c.default.className,style:{fontFamily:"'JetBrains Mono', 'JetBrains Mono Fallback'",fontStyle:"normal"}};null!=c.default.variable&&(d.variable=c.default.variable);let e={title:"Joseph Patrick",description:"An lifelong learner"};function f({children:a}){return(0,b.jsx)("html",{lang:"en",children:(0,b.jsx)("body",{className:`${d.className} antialiased`,children:a})})}}];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__eee347f7._.js.map
