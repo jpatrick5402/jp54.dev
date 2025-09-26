@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <video autoPlay muted loop className="fixed blur-sm brightness-(--video-brightness) -z-1 object-cover h-full w-full">
-        <source src="/desk.mp4" type="video/mp4" />
+        <source src="/typing.mp4" type="video/mp4" />
         Your browser does not support the video tag
       </video>
       <div className="flex flex-col m-auto">
