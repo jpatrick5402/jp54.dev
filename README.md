@@ -1,3 +1,3 @@
 # jp54.dev
 
-This is my personl portpholo website
+This is my personl portfolio website
