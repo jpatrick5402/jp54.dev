@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///home/jpatrick5402/Code/jp54/app/projects/page.tsx"],"sourcesContent":["import { FaHandSpock, FaLaptopCode } from \"react-icons/fa\";\nimport { FiCoffee } from \"react-icons/fi\";\nimport { IoIosMail } from \"react-icons/io\";\nimport { IoShareSocial } from \"react-icons/io5\";\n\nexport default function Home() {\n  return (\n    <div>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAKe,SAAS;IACtB,qBACE,8OAAC;;;;;AAGL","debugId":null}}]
+}
