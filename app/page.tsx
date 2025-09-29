@@ -2,6 +2,7 @@ import { FaHandSpock, FaLaptopCode, FaGithub, FaLinkedin } from "react-icons/fa"
 import { FiCoffee } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
 import { IoShareSocial } from "react-icons/io5";
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       </video>
       <div className="flex flex-col m-auto max-w-5xl items-center justify-center">
         <div className="flex flex-col sm:flex-row p-2 m-auto items-center justify-center gap-4">
-          <img src='/profile.jpg' className="flex w-[15%] min-w-[180px] rounded-4xl border-5 border-black" />
+          <Image src='/profile.jpg' alt='Profile Pic' className="flex w-[15%] min-w-[180px] rounded-4xl border-5 border-black" />
           <h1 className="p-2 text-2xl text-(--text-accent) flex bg-(--background) rounded-sm">Hello, My name is Joseph Patrick&nbsp;
             <FaHandSpock className="flex mt-auto mb-auto" />
           </h1>
@@ -23,7 +24,7 @@ export default function Home() {
               <FiCoffee className="flex mt-auto mb-auto" />
             </p>
             <p className="p-2 m-auto flex bg-(--background) rounded-sm">
-              I was raised in Texas, but moved Northeast after high school. I'm married to the light of my life, and have a cat named Nylah. I attained my Bachelors of Science in Computer Science and Cybersecurity from Liberty University in 2025.
+              I was raised in Texas, but moved Northeast after high school. I&apos;m married to the light of my life, and have a cat named Nylah. I attained my Bachelors of Science in Computer Science and Cybersecurity from Liberty University in 2025.
             </p>
           </div>
           <div className="flex flex-col m-auto mb-6">
@@ -31,7 +32,7 @@ export default function Home() {
               <FaLaptopCode className="flex mt-auto mb-auto" />
             </p>
             <p className="p-2 m-auto flex bg-(--background) rounded-sm">
-              I'm currently a Service Desk Technician III where I work on large projects and collaborate across teams. I'm looking to move into software engineering work.
+              I&apos;m currently a Service Desk Technician III where I work on large projects and collaborate across teams. I&apos;m looking to move into software engineering work.
             </p>
           </div>
           <div className="flex flex-col m-auto mb-6">

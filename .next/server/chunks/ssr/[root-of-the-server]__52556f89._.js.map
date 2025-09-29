@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/jpatric5/Code/jp54/app/photography/page.tsx"],"sourcesContent":["export default function Photography() {\r\n  return (\r\n    <div className=\"flex\">\r\n      <ul className=\"m-auto\">\r\n      </ul>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAG,WAAU;;;;;;;;;;;AAIpB","debugId":null}}]
-}
