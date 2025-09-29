@@ -1,11 +1,11 @@
-import { FaHandSpock, FaLaptopCode } from "react-icons/fa";
-import { FiCoffee } from "react-icons/fi";
-import { IoIosMail } from "react-icons/io";
-import { IoShareSocial } from "react-icons/io5";
-
-export default function Home() {
+export default function Projects() {
   return (
-    <div>
+    <div className="flex">
+      <ul className="m-auto">
+        <li><a href="https://github.com/jpatrick5402/SDMultitool" className="text-(--text-accent)">Service Desk MultiTool</a></li>
+        <li><a href="https://finance-hub.dev" className="text-(--text-accent)">Finance Hub</a></li>
+        <li><a href="https://tracker-jp.vercel.app" className="text-(--text-accent)">Tracker</a></li>
+      </ul>
     </div>
   );
 }

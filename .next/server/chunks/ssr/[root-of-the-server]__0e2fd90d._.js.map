@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/jpatric5/Code/jp54/app/projects/page.tsx"],"sourcesContent":["export default function Projects() {\r\n  return (\r\n    <div className=\"flex\">\r\n      <ul className=\"m-auto\">\r\n        <li><a href=\"https://github.com/jpatrick5402/SDMultitool\" className=\"text-(--text-accent)\">Service Desk MultiTool</a></li>\r\n        <li><a href=\"https://finance-hub.dev\" className=\"text-(--text-accent)\">Finance Hub</a></li>\r\n        <li><a href=\"https://tracker-jp.vercel.app\" className=\"text-(--text-accent)\">Tracker</a></li>\r\n      </ul>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAG,WAAU;;8BACZ,8OAAC;8BAAG,cAAA,8OAAC;wBAAE,MAAK;wBAA8C,WAAU;kCAAuB;;;;;;;;;;;8BAC3F,8OAAC;8BAAG,cAAA,8OAAC;wBAAE,MAAK;wBAA0B,WAAU;kCAAuB;;;;;;;;;;;8BACvE,8OAAC;8BAAG,cAAA,8OAAC;wBAAE,MAAK;wBAAgC,WAAU;kCAAuB;;;;;;;;;;;;;;;;;;;;;;AAIrF","debugId":null}}]
+}

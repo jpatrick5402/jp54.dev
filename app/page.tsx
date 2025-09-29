@@ -1,42 +1,55 @@
-import { FaHandSpock, FaLaptopCode } from "react-icons/fa";
+import { FaHandSpock, FaLaptopCode, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiCoffee } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
 import { IoShareSocial } from "react-icons/io5";
 
 export default function Home() {
   return (
-    <div className="flex">
-      <video autoPlay muted loop className="fixed blur-sm brightness-(--video-brightness) -z-1 object-cover h-full w-full hidden sm:flex">
+    <div>
+      <video id="bg-video" autoPlay muted loop className="fixed blur-sm brightness-(--video-brightness) -z-1 object-cover h-full w-full">
         <source src="/typing.mp4" type="video/mp4" />
         Your browser does not support the video tag
       </video>
-      <div className="w-full">
-        <div className="flex p-2 m-auto">
-          <h1 className="m-auto p-2 text-2xl text-[#2C92A5] flex bg-(--background) rounded-sm">Hello, My name is Joseph Patrick&nbsp;
+      <div className="flex flex-col m-auto max-w-5xl items-center justify-center">
+        <div className="flex flex-col sm:flex-row p-2 m-auto items-center justify-center gap-4">
+          <img src='/profile.jpg' className="flex w-[15%] min-w-[180px] rounded-4xl border-5 border-black" />
+          <h1 className="p-2 text-2xl text-(--text-accent) flex bg-(--background) rounded-sm">Hello, My name is Joseph Patrick&nbsp;
             <FaHandSpock className="flex mt-auto mb-auto" />
           </h1>
         </div>
         <div className="flex flex-col gap-2 p-2">
-          <div className="m-auto mb-10">
-            <p className="p-2 m-auto flex bg-(--background) rounded-sm">Life&nbsp;
+          <div className="flex flex-col m-auto mb-6">
+            <p className="text-xl p-2 m-auto flex bg-(--background) rounded-sm mb-1">Life&nbsp;
               <FiCoffee className="flex mt-auto mb-auto" />
             </p>
+            <p className="p-2 m-auto flex bg-(--background) rounded-sm">
+              I was raised in Texas, but moved Northeast after high school. I'm married to the light of my life, and have a cat named Nylah. I attained my Bachelors of Science in Computer Science and Cybersecurity from Liberty University in 2025.
+            </p>
           </div>
-          <div className="m-auto mb-10">
-            <p className="p-2 m-auto flex bg-(--background) rounded-sm">Work&nbsp;
+          <div className="flex flex-col m-auto mb-6">
+            <p className="text-xl p-2 m-auto flex bg-(--background) rounded-sm mb-1">Work&nbsp;
               <FaLaptopCode className="flex mt-auto mb-auto" />
             </p>
+            <p className="p-2 m-auto flex bg-(--background) rounded-sm">
+              I'm currently a Service Desk Technician III where I work on large projects and collaborate across teams. I'm looking to move into software engineering work.
+            </p>
           </div>
-          <div className="m-auto mb-10">
-            <p className="p-2 m-auto flex bg-(--background) rounded-sm">Contact&nbsp;
+          <div className="flex flex-col m-auto mb-6">
+            <p className="text-xl p-2 m-auto flex bg-(--background) rounded-sm mb-1">Contact&nbsp;
               <IoIosMail className="flex mt-auto mb-auto" />
             </p>
+            <p className="p-2 m-auto flex bg-(--background) rounded-sm">
+              Email:&nbsp;<a className="text-(--text-accent)" href="mailto:jpatrick5402@gmail.com">jpatrick5402@gmail.com</a>
+            </p>
           </div>
-          <div className="m-auto mb-10">
-            <p className="p-2 m-auto flex bg-(--background) rounded-sm">Socials&nbsp;
+          <div className="flex flex-col m-auto mb-6">
+            <p className="text-xl p-2 m-auto flex bg-(--background) rounded-sm mb-1">Socials&nbsp;
               <IoShareSocial className="flex mt-auto mb-auto" />
             </p>
-
+            <p className="p-2 m-auto flex bg-(--background) rounded-sm gap-2 text-2xl">
+              <a href="https://github.com/jpatrick5402/"><FaGithub /></a>
+              <a href="https://www.linkedin.com/in/joseph-patrick-b84990238/"><FaLinkedin /></a>
+            </p>
           </div>
         </div>
       </div>

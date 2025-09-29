@@ -16,10 +16,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`flex flex-col ${jetbrains.className} antialiased`}>
-        <nav className="flex bg-(--background) w-full h-10 gap-4 text-2xl font-bold items-center align-center justify-center">
+        <nav className="flex bg-(--background) w-full pt-3 pb-3 gap-4 text-2xl font-bold items-center align-center justify-center">
           <Link className="flex m-auto" href='/'>ABOUT</Link>
           <Link className="flex m-auto" href='/projects'>PROJECTS</Link>
           <Link className="flex m-auto" href='https://store.jp54.dev'>STORAGE</Link>
+          <Link className="flex m-auto" href='/photography'>PHOTOGRAPHY</Link>
         </nav>
         {children}
       </body>

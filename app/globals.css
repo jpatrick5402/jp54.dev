@@ -3,7 +3,8 @@
 :root {
   --background: #FFFFFF;
   --foreground: #171717;
-  --video-brightness: 100%;
+  --video-brightness: 80%;
+  --text-accent: #2C92A5;
 }
 
 @theme inline {
@@ -17,11 +18,18 @@
   :root {
     --background: #020A10;
     --foreground: #ededed;
-    --video-brightness: 50%;
+    --video-brightness: 35%;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+#bg-video {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
 }
