@@ -4,10 +4,6 @@ import Link from 'next/link';
 export default function Projects() {
   return (
     <div className="flex">
-      <video id="bg-video" autoPlay muted loop className="fixed blur-sm brightness-(--video-brightness) -z-1 object-cover h-full w-full">
-        <source src="/typing.mp4" type="video/mp4" />
-        Your browser does not support the video tag
-      </video>
       <div className="flex m-auto">
         <ul className="flex flex-col gap-2 m-2">
           <li className="p-2 m-auto flex bg-(--background) rounded-sm">

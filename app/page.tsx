@@ -7,10 +7,6 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div>
-      <video id="bg-video" autoPlay muted loop className="fixed blur-sm brightness-(--video-brightness) -z-1 object-cover h-full w-full">
-        <source src="/typing.mp4" type="video/mp4" />
-        Your browser does not support the video tag
-      </video>
       <div className="flex flex-col m-auto max-w-5xl items-center justify-center">
         <div className="flex flex-col sm:flex-row p-2 m-auto items-center justify-center gap-4">
           <Image width='100' height='100' src='/profile.jpg' alt='Profile Pic' className="flex w-[15%] min-w-[180px] rounded-4xl border-5 border-black" />
