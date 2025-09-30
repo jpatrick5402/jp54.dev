@@ -98,7 +98,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\jpatric5\\Code\\jp54",
+    "outputFileTracingRoot": "C:\\Users\\jpatric5\\Code\\jp54.dev",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -287,10 +287,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "C:\\Users\\jpatric5\\Code\\jp54"
+      "root": "C:\\Users\\jpatric5\\Code\\jp54.dev"
     }
   },
-  "appDir": "C:\\Users\\jpatric5\\Code\\jp54",
+  "appDir": "C:\\Users\\jpatric5\\Code\\jp54.dev",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
