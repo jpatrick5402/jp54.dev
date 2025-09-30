@@ -13,7 +13,7 @@ export default function Home() {
       </video>
       <div className="flex flex-col m-auto max-w-5xl items-center justify-center">
         <div className="flex flex-col sm:flex-row p-2 m-auto items-center justify-center gap-4">
-          <Image src='/profile.jpg' alt='Profile Pic' className="flex w-[15%] min-w-[180px] rounded-4xl border-5 border-black" />
+          <Image width='100' height='100' src='/profile.jpg' alt='Profile Pic' className="flex w-[15%] min-w-[180px] rounded-4xl border-5 border-black" />
           <h1 className="p-2 text-2xl text-(--text-accent) flex bg-(--background) rounded-sm">Hello, My name is Joseph Patrick&nbsp;
             <FaHandSpock className="flex mt-auto mb-auto" />
           </h1>
