@@ -1,47 +1,57 @@
 'use client';
-import { FaHandSpock, FaLaptopCode, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaLaptopCode, FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiCoffee } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
 import { IoShareSocial } from "react-icons/io5";
 import Image from 'next/image';
+import { useFrame } from "@react-three/fiber";
+import { useRef } from "react";
 
-import { extend } from '@react-three/fiber'
+import * as THREE from 'three';
+import { extend } from "@react-three/fiber";
+import { ThreeElement } from "@react-three/fiber";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
-import almendra from '../Almendra SC_Regular.json'
+import jetbrains from "@assets/JetBrains Mono_Regular.json";
 
-extend({ OrbitControls, TextGeometry })
+extend({ TextGeometry })
 
 declare module "@react-three/fiber" {
   interface ThreeElements {
-    textGeometry: Object3DNode<TextGeometry, typeof TextGeometry>;
+    textGeometry: ThreeElement<typeof TextGeometry>;
   }
 }
 
 function Text() {
-  const font = new FontLoader().parse(almendra);
+  const font = new FontLoader().parse(jetbrains);
+  const meshRef = useRef<THREE.Mesh>(null);
+
+  useFrame(() => {
+    if (meshRef.current)
+      meshRef.current.rotation.x += 0.01; // Adjust the value for speed
+  });
 
   return (
-    <mesh position={[-5,0,0]}>
-      <textGeometry args={['Joseph Patrick', {font, size: 1, height: 1, depth: .1}]} />
-      <meshPhysicalMaterial attach="material" color={'white'}/>
+    <mesh ref={meshRef} position={[-6, -1, 0]}>
+      <textGeometry args={['Joseph Patrick', { font, size: 1, height: 1, depth: .1 }]} />
+      <meshPhysicalMaterial attach="material" color={'white'} />
     </mesh>
   )
 }
 
-
 export default function Home() {
+
   return (
     <div>
       <div className="flex flex-col m-auto max-w-5xl items-center justify-center">
         <div className="flex flex-col sm:flex-row p-2 m-auto items-center justify-center gap-4">
-          <Image width='100' height='100' src='/profile.jpg' alt='Profile Pic' className="flex w-[15%] min-w-[180px] rounded-4xl border-5 border-black" />
+          <Image width={100} height={100} src='/profile.jpg' alt='Profile Pic' className="flex w-[15%] min-w-[180px] rounded-4xl border-5 border-black" />
           <Canvas>
-            <OrbitControls></OrbitControls>
-            <ambientLight intensity={2}></ambientLight>
-            <Text></Text>
+            <OrbitControls />
+            <ambientLight intensity={2} />
+            <Text />
           </Canvas>
         </div>
         <div className="flex flex-col gap-2 p-2">
