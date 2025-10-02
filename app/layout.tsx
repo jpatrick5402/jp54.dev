@@ -21,14 +21,16 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="-z-2 bg-(--background)">
       <body className={`flex flex-col ${jetbrains.className} antialiased`}>
         <Nav />
-        <video id="bg-video" autoPlay muted loop className="fixed blur-sm brightness-(--video-brightness) -z-1 object-cover h-full w-full">
+        <video id="bg-video" autoPlay muted loop className="fixed blur-sm z-0 brightness-(--video-brightness) object-cover h-full w-full">
           <source src="/typing.mp4" type="video/mp4" />
           Your browser does not support the video tag
         </video>
-        {children}
+        <div className="z-0">
+          {children}
+        </div>
       </body>
     </html>
   );
