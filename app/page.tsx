@@ -34,7 +34,7 @@ function Laptop() {
           <mesh material={materials['matte.001']} geometry={(nodes['Cube008_1'] as THREE.Mesh).geometry} />
           <mesh geometry={(nodes['Cube008_2'] as THREE.Mesh).geometry}>
             <Html className="content" rotation-x={-Math.PI / 2} position={[0, 0.05, -0.09]} transform occlude>
-              <div className="wrapper" onPointerDown={(e) => e.stopPropagation()}>
+              <div className="wrapper">
                 <WebPage />
               </div>
             </Html>
@@ -56,7 +56,7 @@ export default function Home() {
     <div>
       <div className="flex flex-col m-auto max-w-5xl items-center justify-center">
         <div className="flex flex-col sm:flex-row gap-4 w-full">
-          <div style={{ width: '100%', height: '40vh'}} className="flex w-full m-auto items-center justify-center">
+          <div style={{ width: '100%', height: '40vh' }} className="flex w-full m-auto items-center justify-center">
             <Canvas camera={{ position: [0, 0, -15], fov: 55 }}>
               <pointLight position={[10, 10, 10]} intensity={1.5} />
               <Suspense fallback={null}>
@@ -70,7 +70,7 @@ export default function Home() {
             </Canvas>
           </div>
           <div className="w-full m-auto p-2">
-            <Image height={'300'} width={'300'} alt="Profile Picture" src="/profile.jpg" className="m-auto rounded-4xl border-2 border-(--background)"/>
+            <Image height={'300'} width={'300'} alt="Profile Picture" src="/profile.jpg" className="m-auto rounded-4xl border-2 border-(--background)" />
           </div>
         </div>
         <div className="flex flex-col gap-2 p-2">
