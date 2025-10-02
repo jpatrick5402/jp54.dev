@@ -8,10 +8,24 @@ export default function Projects() {
         <ul className="flex flex-col gap-2 m-2">
           <li className="p-2 m-auto flex bg-(--background) rounded-sm">
             <div className="flex flex-col sm:flex-row">
+              <Link href="https://github.com/jpatrick5402/SDMultitool" className="text-center text-(--text-accent)">GitHub:</Link>
+              <FaExternalLinkSquareAlt className="text-(--text-accent) m-auto" />
+            </div>
+            <p className="text-center">&nbsp;All source code can be found on my GitHub page</p>
+          </li>
+          <li className="p-2 m-auto flex bg-(--background) rounded-sm">
+            <div className="flex flex-col sm:flex-row">
+              <Link href="https://github.com/jpatrick5402/SDMultitool" className="text-center text-(--text-accent)">.dotfiles:</Link>
+              <FaExternalLinkSquareAlt className="text-(--text-accent) m-auto" />
+            </div>
+            <p className="text-center">&nbsp;A repo containing configurations I use for my systems</p>
+          </li>
+          <li className="p-2 m-auto flex bg-(--background) rounded-sm">
+            <div className="flex flex-col sm:flex-row">
               <Link href="https://github.com/jpatrick5402/SDMultitool" className="text-center text-(--text-accent)">Service Desk MultiTool:</Link>
               <FaExternalLinkSquareAlt className="text-(--text-accent) m-auto" />
             </div>
-              <p className="text-center">&nbsp;A C#/WPF desktop application</p>
+            <p className="text-center">&nbsp;A C#/WPF desktop application</p>
           </li>
           <li className="p-2 m-auto flex bg-(--background) rounded-sm">
             <div className="flex flex-col sm:flex-row">

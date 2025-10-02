@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import type { Viewport } from 'next';
-import Nav from './Nav'
+import Nav from '@components/Nav'
 
 const jetbrains = JetBrains_Mono({
   subsets: ['latin'],
