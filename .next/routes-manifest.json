@@ -39,10 +39,10 @@
       "namedRegex": "^/favicon\\.ico(?:/)?$"
     },
     {
-      "page": "/photography",
-      "regex": "^/photography(?:/)?$",
+      "page": "/photos",
+      "regex": "^/photos(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/photography(?:/)?$"
+      "namedRegex": "^/photos(?:/)?$"
     },
     {
       "page": "/projects",
