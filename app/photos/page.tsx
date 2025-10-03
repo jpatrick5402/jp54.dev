@@ -9,21 +9,22 @@ const galleryIndex = [
     text: 'Sunset over the water',
     image: '/gallery/sunset.jpg'
   },
+  {
+    date: '5/3/22',
+    text: 'Shenandoah National Park',
+    image: '/gallery/mountain.jpg'
+  },
 ]
 
 export default function Photos() {
   return (
     <div>
-      <ul className="flex flex-col gap-4 m-auto p-2">
+      <ul className="flex flex-wrap gap-4 m-auto p-2 justify-center">
         {galleryIndex.map((item, index) => {
           return (
-            <li className="flex gap-2" key={index}>
-              <div className="flex m-auto w-full">
-                <p className="flex bg-(--background) p-2 m-auto flex text-center rounded">{item.date + ' ' + item.text}</p>
-              </div>
-              <div className="flex w-full relative">
-                <img src={item.image} alt={'photo of ' + item.text} className="m-auto rounded-3xl max-h-[50vh]" />
-              </div>
+            <li className="flex flex-col gap-2 justify-center items-center" key={index}>
+              <img src={item.image} alt={'photo of ' + item.text} className="flex rounded-3xl max-h-[50vh]" />
+              <p className="flex bg-(--background) p-2 text-center rounded">{item.date + ' ' + item.text}</p>
             </li>
           )
         })}
