@@ -14,19 +14,19 @@ import Loader from '@components/Loader';
 export default function Home() {
   return (
     <div>
-      <div className="flex flex-col m-auto max-w-5xl items-center justify-center">
+      <div className="flex flex-col m-auto max-w-6xl items-center justify-center">
         <div className="flex flex-col sm:flex-row gap-4 w-full">
           <div style={{ width: '100%', height: '40vh' }} className="flex w-full m-auto items-center justify-center">
             <Canvas camera={{ position: [0, 0, -15], fov: 55 }}>
-              <pointLight position={[10, 10, 10]} intensity={1.5} />
               <Suspense fallback={<Loader />}>
+                <pointLight position={[10, 10, 10]} intensity={1.5} />
                 <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
                   <Laptop />
                 </group>
                 <Environment preset="city" />
+                <ContactShadows position={[0, -3, 0]} scale={20} blur={2} far={4.5} />
+                <OrbitControls enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />
               </Suspense>
-              <ContactShadows position={[0, -3, 0]} scale={20} blur={2} far={4.5} />
-              <OrbitControls enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />
             </Canvas>
           </div>
           <div className="w-full m-auto p-2">
