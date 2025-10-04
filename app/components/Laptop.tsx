@@ -28,8 +28,8 @@ export default function Laptop() {
           <mesh material={materials.aluminium} geometry={(nodes['Cube008'] as THREE.Mesh).geometry} />
           <mesh material={materials['matte.001']} geometry={(nodes['Cube008_1'] as THREE.Mesh).geometry} />
           <mesh geometry={(nodes['Cube008_2'] as THREE.Mesh).geometry}>
-            <Html className="content" rotation-x={-Math.PI / 2} position={[0, 0.05, -0.09]} transform occlude>
-              <div className="wrapper">
+            <Html className="flex content m-auto text-center" rotation-x={-Math.PI / 2} position={[0, 0.05, -0.09]} transform occlude>
+              <div className="flex flex-col wrapper">
                 <h1 className={`text-center text-7xl ${hovered ? 'text-(--text-accent)' : 'text-black'}`} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>Joseph</h1>
                 <h1 className={`text-center text-7xl ${hovered ? 'text-(--text-accent)' : 'text-black'}`} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>Patrick</h1>
               </div>
