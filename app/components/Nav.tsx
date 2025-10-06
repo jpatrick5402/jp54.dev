@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import { FaExternalLinkSquareAlt } from 'react-icons/fa';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { IoMenu } from 'react-icons/io5';
@@ -21,7 +20,6 @@ export default function Nav() {
       <nav className="hidden sm:flex bg-(--background) max-w-6xl w-full m-auto pt-3 pb-3 gap-4 text-2xl font-bold items-center align-center justify-center">
         <Link className={`flex m-auto ${url === '/' && 'text-(--text-accent)'}`} href='/'>ABOUT</Link>
         <Link className={`flex m-auto ${url === '/projects' && 'text-(--text-accent)'}`} href='/projects'>PROJECTS</Link>
-        <Link className={`flex m-auto`} href='https://store.jp54.dev'>STORAGE<FaExternalLinkSquareAlt className="m-auto p-1" /></Link>
         <Link className={`flex m-auto ${url === '/photos' && 'text-(--text-accent)'}`} href='/photos'>PHOTOS</Link>
       </nav>
       <nav className="flex flex-col sm:hidden bg-(--background) m-auto max-w-5xl gap-4 pt-3 pb-3 text-2xl font-bold items-center align-center justify-center">
@@ -32,7 +30,6 @@ export default function Nav() {
         {showNav && <div>
           <Link className={`flex m-auto ${url === '/' && 'text-(--text-accent)'}`} onClick={() => setShowNav(!showNav)} href='/'>ABOUT</Link>
           <Link className={`flex m-auto ${url === '/projects' && 'text-(--text-accent)'}`} onClick={() => setShowNav(!showNav)} href='/projects'>PROJECTS</Link>
-          <Link className={`flex m-auto`} onClick={() => setShowNav(!showNav)} href='https://store.jp54.dev'>STORAGE<FaExternalLinkSquareAlt className="m-auto p-1" /></Link>
           <Link className={`flex m-auto ${url === '/photos' && 'text-(--text-accent)'}`} onClick={() => setShowNav(!showNav)} href='/photos'>PHOTOS</Link>
         </div>}
       </nav>
