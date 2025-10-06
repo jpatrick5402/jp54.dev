@@ -1,46 +1,52 @@
 import { FaExternalLinkSquareAlt } from 'react-icons/fa';
 import Link from 'next/link';
 
+const projectList = [
+  {
+    'title': 'GitHub',
+    'description': 'All source code can be found on my GitHub page',
+    'link': 'https://github.com/jpatrick5402',
+  },
+  {
+    'title': '.dotfiles',
+    'description': 'A repo containing configurations I use for my systems',
+    'link': 'https://github.com/jpatrick5402/.dotfiles',
+  },
+  {
+    'title': 'Service Desk Multi-Tool',
+    'description': 'A collection of helful tools for a service desk technician',
+    'link': 'https://github.com/jpatrick5402/SDMultitool',
+  },
+  {
+    'title': 'Finance-Hub',
+    'description': 'An all-in-one financial tracking tool',
+    'link': 'https://github.com/jpatrick5402/finance-hub',
+  },
+  {
+    'title': 'Tracker',
+    'description': 'An online to-do list',
+    'link': 'https://github.com/jpatrick5402/tracker',
+  },
+]
+
 export default function Projects() {
   return (
     <div className="flex">
       <div className="flex m-auto">
         <ul className="flex flex-col gap-2 m-2">
-          <li className="p-2 m-auto flex bg-(--background) rounded-sm">
-            <div className="flex flex-col sm:flex-row">
-              <Link href="https://github.com/jpatrick5402/SDMultitool" className="text-center text-(--text-accent)">GitHub:</Link>
-              <FaExternalLinkSquareAlt className="text-(--text-accent) m-auto" />
-            </div>
-            <p className="text-center">&nbsp;All source code can be found on my GitHub page</p>
-          </li>
-          <li className="p-2 m-auto flex bg-(--background) rounded-sm">
-            <div className="flex flex-col sm:flex-row">
-              <Link href="https://github.com/jpatrick5402/SDMultitool" className="text-center text-(--text-accent)">.dotfiles:</Link>
-              <FaExternalLinkSquareAlt className="text-(--text-accent) m-auto" />
-            </div>
-            <p className="text-center">&nbsp;A repo containing configurations I use for my systems</p>
-          </li>
-          <li className="p-2 m-auto flex bg-(--background) rounded-sm">
-            <div className="flex flex-col sm:flex-row">
-              <Link href="https://github.com/jpatrick5402/SDMultitool" className="text-center text-(--text-accent)">Service Desk MultiTool:</Link>
-              <FaExternalLinkSquareAlt className="text-(--text-accent) m-auto" />
-            </div>
-            <p className="text-center">&nbsp;A C#/WPF desktop application</p>
-          </li>
-          <li className="p-2 m-auto flex bg-(--background) rounded-sm">
-            <div className="flex flex-col sm:flex-row">
-              <Link href="https://finance-hub.dev" className="text-center text-(--text-accent)">Finance Hub:</Link>
-              <FaExternalLinkSquareAlt className="text-(--text-accent) m-auto" />
-            </div>
-            <p className="text-center">&nbsp;An all-in-one financial tracking tool</p>
-          </li>
-          <li className="p-2 m-auto flex bg-(--background) rounded-sm">
-            <div className="flex flex-col sm:flex-row">
-              <Link href="https://tracker-jp.vercel.app" className="text-center text-(--text-accent)">Tracker:</Link>
-              <FaExternalLinkSquareAlt className="text-(--text-accent) m-auto" />
-            </div>
-            <p className="text-center">&nbsp;An online to-do list</p>
-          </li>
+          {
+            projectList.map((project, index) => {
+              return (
+                <li key={index} className="p-2 m-auto flex bg-(--background) rounded-sm">
+                  <div className="flex flex-col sm:flex-row">
+                    <Link href={project.link} target='_blank' className="text-center text-(--text-accent)">{project.title + ":"}</Link>
+                    <FaExternalLinkSquareAlt className="text-(--text-accent) m-auto" />
+                  </div>
+                  <p className="text-center">&nbsp;{project.description}</p>
+                </li>
+              )
+            })
+          }
         </ul>
       </div>
     </div>
