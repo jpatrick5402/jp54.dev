@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const galleryIndex = [
   {
     date: '9/28/25',
@@ -28,7 +30,9 @@ export default function Photos() {
         {galleryIndex.map((item, index) => {
           return (
             <li className="flex flex-col gap-2 justify-center items-center" key={index}>
-              <img src={item.image} alt={'photo of ' + item.text} className="flex rounded-3xl max-h-[50vh]" />
+              <div className="relative w-full h-[50vh] min-h-[300px] max-h-[50vh]">
+                <Image src={item.image} alt={'photo of ' + item.text} fill objectFit="cover" className="rounded-xl" />
+              </div>
               <p className="flex bg-(--background) p-2 text-center rounded">{item.date + ' ' + item.text}</p>
             </li>
           )
