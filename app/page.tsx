@@ -4,6 +4,8 @@ import { FiCoffee } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
 import { IoShareSocial } from "react-icons/io5";
 import Image from 'next/image';
+import Link from "next/link";
+import { useState } from "react";
 
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
@@ -12,6 +14,8 @@ import Laptop from '@components/Laptop'
 import Loader from '@components/Loader';
 
 export default function Home() {
+  const [showNylah, setShowNylah] = useState(false);
+
   return (
     <div>
       <div className="flex flex-col m-auto max-w-6xl items-center justify-center">
@@ -38,8 +42,9 @@ export default function Home() {
             <p className="text-xl p-2 m-auto flex bg-(--background) rounded-sm mb-1">Life&nbsp;
               <FiCoffee className="flex mt-auto mb-auto" />
             </p>
-            <p className="p-2 m-auto flex bg-(--background) rounded-sm">
-              I was raised in Texas, but moved Northeast after high school. I&apos;m married to the light of my life, and have a cat named Nylah. I attained my Bachelors of Science in Computer Science and Cybersecurity from Liberty University in 2025.
+            <p className="p-2 m-auto inline flex flex-col bg-(--background) rounded-sm">
+              Hi there, my name is Joseph, and if you couldn&apos;t tell, I like working with software. I was raised in Texas but moved to the northeaster U.S. shortly after high school. I&apos;m hapilly married to the light of my life, and have a cat named <Link onMouseOver={() => setShowNylah(true)} onMouseOut={() => setShowNylah(false)} href={'/photos'} className="underline">Nylah</Link>.
+              <Image src={'/gallery/nylah.jpg'} height={300} width={300} alt="Picture of Nylah" className={`${showNylah ? 'flex' : 'hidden'} m-auto p-2 rounded-xl`} />
             </p>
           </div>
           <div className="flex flex-col m-auto mb-6">
@@ -47,7 +52,7 @@ export default function Home() {
               <FaLaptopCode className="flex mt-auto mb-auto" />
             </p>
             <p className="p-2 m-auto flex bg-(--background) rounded-sm">
-              I&apos;m currently a Service Desk Technician III where I work on large projects and collaborate across teams. I&apos;m looking to move into software engineering work.
+              I attained my Bachelors of Science in Computer Science and Cybersecurity from Liberty University in 2025 as summa cum laude. I&apos;m currently a Service Desk Technician III where I work on large projects and collaborate across teams. I&apos;m looking to move into software engineering work.
             </p>
           </div>
           <div className="flex flex-col m-auto mb-6">
