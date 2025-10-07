@@ -39,7 +39,7 @@ export default function Projects() {
               return (
                 <li key={index} className="p-2 m-auto flex bg-(--background) rounded-sm">
                   <div className="flex flex-col sm:flex-row">
-                    <Link href={project.link} target='_blank' className="text-center text-(--text-accent)">{project.title + ":"}</Link>
+                    <Link href={project.link} target='_blank' className="text-center text-(--text-accent) font-bold">{project.title + ":"}</Link>
                     <FaExternalLinkSquareAlt className="text-(--text-accent) m-auto" />
                   </div>
                   <p className="text-center">&nbsp;{project.description}</p>

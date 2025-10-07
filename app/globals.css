@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFFFFF;
+  --background: #e2e2e2;
   --foreground: #171717;
   --video-brightness: 80%;
   --text-accent: #2C92A5;
@@ -16,7 +16,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #020A10;
+    --background: #282828;
     --foreground: #ededed;
     --video-brightness: 35%;
   }
