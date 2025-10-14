@@ -31,7 +31,7 @@ export default function Photos() {
           return (
             <li className="flex flex-col gap-2 justify-center items-center" key={index}>
               <div className="relative w-full h-[50vh] min-w-[30vw] min-h-[300px] max-h-[50vh]">
-                <Image src={item.image} alt={'photo of ' + item.text} fill className="object-cover" />
+                <Image src={item.image} alt={'photo of ' + item.text} fill className="object-cover rounded-xl" />
               </div>
               <p className="flex bg-(--background) p-2 text-center rounded">{item.date + ' ' + item.text}</p>
             </li>
