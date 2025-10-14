@@ -15,6 +15,7 @@ import Loader from '@components/Loader';
 
 export default function Home() {
   const [showNylah, setShowNylah] = useState(false);
+  const [showHannah, setShowHannah] = useState(false);
 
   return (
     <div>
@@ -43,7 +44,11 @@ export default function Home() {
               <FiCoffee className="flex mt-auto mb-auto" />
             </p>
             <p className="p-2 m-auto inline flex flex-col bg-(--background) rounded-sm">
-              Hi there, my name is Joseph, and if you couldn&apos;t tell, I like working with software. I was raised in Texas but moved to the northeaster U.S. shortly after high school. I&apos;m hapilly married to the light of my life, and have a cat named <Link onMouseOver={() => setShowNylah(true)} onMouseOut={() => setShowNylah(false)} href={'/photos'} className="underline">Nylah</Link>.
+              Hi there, my name is Joseph, and if you couldn&apos;t tell, I like working with software and computers. I was raised in Texas but moved to the northeastern U.S. shortly after high school. I&apos;m hapilly married to the love of my life,&nbsp;
+              <Link onMouseOver={() => setShowHannah(true)} onMouseOut={() => setShowHannah(false)} href={'/photos'} className="underline">Hannah</Link>
+              , and I have a cat named&nbsp;
+              <Link onMouseOver={() => setShowNylah(true)} onMouseOut={() => setShowNylah(false)} href={'/photos'} className="underline">Nylah</Link>.
+              <Image src={'/gallery/engagement.jpg'} height={300} width={300} alt="Picture of Hannah" className={`${showHannah ? 'flex' : 'hidden'} m-auto p-2 rounded-xl`} />
               <Image src={'/gallery/nylah.jpg'} height={300} width={300} alt="Picture of Nylah" className={`${showNylah ? 'flex' : 'hidden'} m-auto p-2 rounded-xl`} />
             </p>
           </div>
@@ -52,7 +57,7 @@ export default function Home() {
               <FaLaptopCode className="flex mt-auto mb-auto" />
             </p>
             <p className="p-2 m-auto flex bg-(--background) rounded-sm">
-              I attained my Bachelors of Science in Computer Science and Cybersecurity from Liberty University in 2025 as summa cum laude. I&apos;m currently a Service Desk Technician III where I work on large projects and collaborate across teams. I&apos;m looking to move into software engineering work.
+              I received my Bachelors of Science in Computer Science and Cybersecurity from Liberty University in 2025 as summa cum laude (Honors Student). I&apos;m currently a Service Desk Technician III for URMC where I work on large projects and solve technical challenges to support healtcare for my organization. I&apos;m looking to move into software engineering or system administration work.
             </p>
           </div>
           <div className="flex flex-col m-auto mb-6">
