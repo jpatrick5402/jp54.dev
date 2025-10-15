@@ -25,19 +25,22 @@ const galleryIndex = [
 
 export default function Photos() {
   return (
-    <div>
-      <ul className="flex flex-wrap gap-4 m-auto p-2 justify-center">
+    <div className="m-auto">
+      <div className="flex flex-wrap gap-6 p-2 justify-center">
         {galleryIndex.map((item, index) => {
           return (
-            <li className="flex flex-col gap-2 justify-center items-center" key={index}>
-              <div className="relative w-full h-[50vh] min-w-[30vw] min-h-[300px] max-h-[50vh]">
-                <Image src={item.image} alt={'photo of ' + item.text} fill className="object-cover rounded-xl" />
+            <div className="flex flex-col gap-2 justify-center items-center" key={index}>
+              {/*
+              <Image src={item.image} alt={'photo of ' + item.text} fill={true} className="object-contain rounded-xl" />
+              */}
+              <div className="relative max-w-[30vw] min-w-[400px]">
+                <Image src={item.image} alt={'photo of ' + item.text} width={0} height={0} style={{ width: '100%', height: 'auto', borderTopLeftRadius: '10px', borderTopRightRadius: '10px', border: '2px solid var(--background)' }} sizes="100vw" />
+                <p className="flex bg-(--background) p-2 text-center rounded-b-xl">{item.date + ' ' + item.text}</p>
               </div>
-              <p className="flex bg-(--background) p-2 text-center rounded">{item.date + ' ' + item.text}</p>
-            </li>
+            </div>
           )
         })}
-      </ul>
+      </div>
     </div>
   );
 }
