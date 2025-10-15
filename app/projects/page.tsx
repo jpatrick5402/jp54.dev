@@ -8,6 +8,11 @@ const projectList = [
     'link': 'https://github.com/jpatrick5402',
   },
   {
+    'title': 'This page (jp54.dev)',
+    'description': 'My personal protfolio page',
+    'link': 'https://jp54.dev',
+  },
+  {
     'title': '.dotfiles',
     'description': 'A repo containing configurations I use for my systems',
     'link': 'https://github.com/jpatrick5402/.dotfiles',
