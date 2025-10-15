@@ -1,10 +1,15 @@
 'use client';
 import * as THREE from 'three'
-import React, { useRef, useState } from 'react'
+import React, { Dispatch, SetStateAction, useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Html, useGLTF } from '@react-three/drei'
 
-export default function Laptop() {
+interface LaptopProps {
+  setShowHannah: Dispatch<SetStateAction<boolean>>;
+  setShowNylah: Dispatch<SetStateAction<boolean>>;
+}
+
+export default function Laptop({ setShowHannah, setShowNylah }: LaptopProps) {
   const group = useRef<THREE.Mesh>(null);
   // Load model
   const { nodes, materials } = useGLTF('/mac-draco.glb');
@@ -29,7 +34,7 @@ export default function Laptop() {
           <mesh material={materials['matte.001']} geometry={(nodes['Cube008_1'] as THREE.Mesh).geometry} />
           <mesh geometry={(nodes['Cube008_2'] as THREE.Mesh).geometry}>
             <Html className="flex content m-auto text-center" rotation-x={-Math.PI / 2} position={[0, 0.05, -0.09]} transform occlude>
-              <div className="flex flex-col wrapper">
+              <div className="flex flex-col wrapper" onClick={() => { setShowHannah(false); setShowNylah(false); }}>
                 <h1 className={`text-center text-7xl ${hovered ? 'text-(--text-accent)' : 'text-black'}`} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>Joseph</h1>
                 <h1 className={`text-center text-7xl ${hovered ? 'text-(--text-accent)' : 'text-black'}`} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>Patrick</h1>
               </div>
@@ -43,7 +48,7 @@ export default function Laptop() {
         <mesh material={materials.trackpad} geometry={(nodes['Cube002_1'] as THREE.Mesh).geometry} />
       </group>
       <mesh material={materials.touchbar} geometry={(nodes.touchbar as THREE.Mesh).geometry} position={[0, -0.03, 1.2]} />
-    </group>
+    </group >
   )
 }
 

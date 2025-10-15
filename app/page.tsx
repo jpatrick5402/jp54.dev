@@ -4,7 +4,6 @@ import { FiCoffee } from "react-icons/fi";
 import { IoIosMail } from "react-icons/io";
 import { IoShareSocial } from "react-icons/io5";
 import Image from 'next/image';
-import Link from "next/link";
 import { useState } from "react";
 
 import { Suspense } from 'react'
@@ -26,7 +25,7 @@ export default function Home() {
               <Suspense fallback={<Loader />}>
                 <pointLight position={[10, 10, 10]} intensity={1.5} />
                 <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
-                  <Laptop />
+                  <Laptop setShowHannah={setShowHannah} setShowNylah={setShowNylah} />
                 </group>
                 <Environment preset="city" />
                 <ContactShadows position={[0, -3, 0]} scale={20} blur={2} far={4.5} />
@@ -35,7 +34,7 @@ export default function Home() {
             </Canvas>
           </div>
           <div className="w-full m-auto p-2">
-            <Image alt="Profile Picture" width={400} height={400} src="/profile.jpg" className="m-auto rounded-4xl border-2 border-(--background)" />
+            <Image alt="Profile Picture" width={400} height={400} src={showNylah ? '/gallery/nylah.jpg' : showHannah ? '/gallery/engagement.jpg' : '/profile.jpg'} className="m-auto rounded-4xl border-2 border-(--background)" />
           </div>
         </div>
         <div className="flex flex-col gap-2 p-2">
@@ -45,11 +44,9 @@ export default function Home() {
             </p>
             <p className="p-2 m-auto inline flex flex-col bg-(--background) rounded-sm">
               Hi there, my name is Joseph, and if you couldn&apos;t tell, I like working with software and computers. I was raised in Texas but moved to the northeastern U.S. shortly after high school. I&apos;m hapilly married to the love of my life,&nbsp;
-              <Link onMouseOver={() => setShowHannah(true)} onMouseOut={() => setShowHannah(false)} href={'/photos'} className="underline">Hannah</Link>
+              <button onClick={() => { setShowHannah(true); setShowNylah(false); window.scrollTo(0, 0); }} className="underline">Hannah</button>
               , and I have a cat named&nbsp;
-              <Link onMouseOver={() => setShowNylah(true)} onMouseOut={() => setShowNylah(false)} href={'/photos'} className="underline">Nylah</Link>.
-              <Image src={'/gallery/engagement.jpg'} height={300} width={300} alt="Picture of Hannah" className={`${showHannah ? 'flex' : 'hidden'} m-auto p-2 rounded-xl`} />
-              <Image src={'/gallery/nylah.jpg'} height={300} width={300} alt="Picture of Nylah" className={`${showNylah ? 'flex' : 'hidden'} m-auto p-2 rounded-xl`} />
+              <button onClick={() => { setShowNylah(true); setShowHannah(false); window.scrollTo(0, 0); }} className="underline">Nylah</button>.
             </p>
           </div>
           <div className="flex flex-col m-auto mb-6">
@@ -57,11 +54,11 @@ export default function Home() {
               <FaLaptopCode className="flex mt-auto mb-auto" />
             </p>
             <p className="p-2 m-auto flex bg-(--background) rounded-sm">
-              I received my Bachelors of Science in Computer Science and Cybersecurity from Liberty University in 2025 as summa cum laude (Honors Student). I&apos;m currently a Service Desk Technician III for URMC where I work on large projects and solve technical challenges to support healtcare for my organization. I&apos;m looking to move into software engineering or system administration work.
+              I received my Bachelors of Science in Computer Science and Cybersecurity from Liberty University in 2025 as summa cum laude (honors student). I&apos;m currently a Service Desk Technician III for URMC where I work on large projects and solve technical challenges to support healtcare for my organization. I&apos;m looking to move into software engineering or system administration work.
             </p>
           </div>
           <div className="flex flex-col m-auto mb-6">
-            <p className="text-xl p-2 m-auto flex bg-(--background) rounded-sm mb-1">Contact&nbsp;
+            <p className="text-xl p-2 m-auto flex bg-(--background) rounded-sm mb-1">Connect&nbsp;
               <IoIosMail className="flex mt-auto mb-auto" />
             </p>
             <p className="p-2 m-auto flex bg-(--background) rounded-sm">

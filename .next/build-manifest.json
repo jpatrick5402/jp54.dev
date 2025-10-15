@@ -17,15 +17,15 @@
     "static/chunks/a6dad97d9634a72d.js"
   ],
   "lowPriorityFiles": [
-    "static/r3tM69zLCIlK3CPBAm6NU/_ssgManifest.js",
-    "static/r3tM69zLCIlK3CPBAm6NU/_buildManifest.js"
+    "static/LEjAI8eiIIPfiJYEUIWQs/_ssgManifest.js",
+    "static/LEjAI8eiIIPfiJYEUIWQs/_buildManifest.js"
   ],
   "rootMainFiles": [
-    "static/chunks/a523523cdf119fcf.js",
+    "static/chunks/ebfb1e6a84698db7.js",
     "static/chunks/47f477e3d2ef265b.js",
     "static/chunks/8082ab48faca5ea1.js",
     "static/chunks/32b4d63e10d31351.js",
-    "static/chunks/turbopack-ddbe20439ff0e9df.js"
+    "static/chunks/turbopack-a286f6ab78135b7e.js"
   ],
   "ampFirstPages": []
 }
