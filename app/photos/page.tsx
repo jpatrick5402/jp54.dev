@@ -33,9 +33,11 @@ export default function Photos() {
               {/*
               <Image src={item.image} alt={'photo of ' + item.text} fill={true} className="object-contain rounded-xl" />
               */}
-              <div className="relative max-w-[30vw] min-w-[400px]">
+              <div className="relative max-w-[30vw] min-w-[300px]">
                 <Image src={item.image} alt={'photo of ' + item.text} width={0} height={0} style={{ width: '100%', height: 'auto', borderTopLeftRadius: '10px', borderTopRightRadius: '10px', border: '2px solid var(--background)' }} sizes="100vw" />
-                <p className="flex bg-(--background) p-2 text-center rounded-b-xl">{item.date + ' ' + item.text}</p>
+                <div className="flex bg-(--background) p-2 text-center rounded-b-xl">
+                  <p className="m-auto">{item.date + ' ' + item.text}</p>
+                </div>
               </div>
             </div>
           )

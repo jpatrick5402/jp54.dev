@@ -1,15 +1,16 @@
 'use client';
 import * as THREE from 'three'
-import React, { Dispatch, SetStateAction, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Html, useGLTF } from '@react-three/drei'
+import Image from 'next/image';
 
 interface LaptopProps {
-  setShowHannah: Dispatch<SetStateAction<boolean>>;
-  setShowNylah: Dispatch<SetStateAction<boolean>>;
+  showHannah: boolean,
+  showNylah: boolean
 }
 
-export default function Laptop({ setShowHannah, setShowNylah }: LaptopProps) {
+export default function Laptop({ showHannah, showNylah }: LaptopProps) {
   const group = useRef<THREE.Mesh>(null);
   // Load model
   const { nodes, materials } = useGLTF('/mac-draco.glb');
@@ -34,9 +35,21 @@ export default function Laptop({ setShowHannah, setShowNylah }: LaptopProps) {
           <mesh material={materials['matte.001']} geometry={(nodes['Cube008_1'] as THREE.Mesh).geometry} />
           <mesh geometry={(nodes['Cube008_2'] as THREE.Mesh).geometry}>
             <Html className="flex content m-auto text-center" rotation-x={-Math.PI / 2} position={[0, 0.05, -0.09]} transform occlude>
-              <div className="flex flex-col wrapper" onClick={() => { setShowHannah(false); setShowNylah(false); }}>
-                <h1 className={`text-center text-7xl ${hovered ? 'text-(--text-accent)' : 'text-black'}`} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>Joseph</h1>
-                <h1 className={`text-center text-7xl ${hovered ? 'text-(--text-accent)' : 'text-black'}`} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>Patrick</h1>
+              <div className="flex flex-col wrapper" onClick={() => { }}>
+                {
+                  showHannah ?
+                    <div className="relative">
+                      <Image src='/gallery/engagement.jpg' alt='Hannah' width={0} height={0} style={{ width: '330px', height: 'auto', margin: 'auto' }} sizes="100vw" />
+                    </div>
+                    : showNylah ?
+                      <div className="relative">
+                        <Image src='/gallery/nylah.jpg' alt='Nylah' width={0} height={0} style={{ width: '225px', height: 'auto', margin: 'auto' }} sizes="100vw" />
+                      </div>
+                      : <>
+                        <h1 className={`text-center text-7xl ${hovered ? 'text-(--text-accent)' : 'text-black'}`} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>Joseph</h1>
+                        <h1 className={`text-center text-7xl ${hovered ? 'text-(--text-accent)' : 'text-black'}`} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>Patrick</h1>
+                      </>
+                }
               </div>
             </Html>
           </mesh>

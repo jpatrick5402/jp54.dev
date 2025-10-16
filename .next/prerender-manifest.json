@@ -1,30 +1,6 @@
 {
   "version": 4,
   "routes": {
-    "/": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/favicon.ico": {
       "initialHeaders": {
         "cache-control": "public, max-age=0, must-revalidate",
@@ -103,6 +79,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/",
+      "dataRoute": "/index.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/photos": {
       "experimentalBypassFor": [
         {
@@ -131,8 +131,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "0afb57b166eeeec751d3a5ea95e05090",
-    "previewModeSigningKey": "085963635891d7a337d028c06d017ca02cd3457be2b5fe6dd00137d8acff82a1",
-    "previewModeEncryptionKey": "7e478490b2b5648e87c9bf7c0fbf9df867a81d4d11527cea92f6d96241bd99c1"
+    "previewModeId": "fa439d7ce026bb6f3acb7964ce88ae8e",
+    "previewModeSigningKey": "81b315c6e4c396262ed6a2019e5b829ebc5f651dc97e88c37ffc2029ec21d9c0",
+    "previewModeEncryptionKey": "0aa05cb2494539ffa4bed68642e73053c2e4dc1f7c523ad61525ef1002880f53"
   }
 }

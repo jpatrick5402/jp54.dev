@@ -20,21 +20,21 @@ export default function Home() {
     <div>
       <div className="flex flex-col m-auto max-w-6xl items-center justify-center">
         <div className="flex flex-col sm:flex-row gap-4 w-full">
+          <div className="w-full m-auto p-2">
+            <Image alt="Profile Picture" width={400} height={400} src='/profile.jpg' className="m-auto rounded-4xl border-2 border-(--background)" />
+          </div>
           <div style={{ width: '100%', height: '40vh' }} className="flex w-full m-auto items-center justify-center">
             <Canvas camera={{ position: [0, 0, -15], fov: 55 }}>
               <Suspense fallback={<Loader />}>
                 <pointLight position={[10, 10, 10]} intensity={1.5} />
-                <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
-                  <Laptop setShowHannah={setShowHannah} setShowNylah={setShowNylah} />
+                <group rotation={[0, Math.PI, 0]} position={[0, .5, 0]}>
+                  <Laptop showHannah={showHannah} showNylah={showNylah} />
                 </group>
                 <Environment preset="city" />
                 <ContactShadows position={[0, -3, 0]} scale={20} blur={2} far={4.5} />
                 <OrbitControls enablePan={false} enableZoom={false} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />
               </Suspense>
             </Canvas>
-          </div>
-          <div className="w-full m-auto p-2">
-            <Image alt="Profile Picture" width={400} height={400} src={showNylah ? '/gallery/nylah.jpg' : showHannah ? '/gallery/engagement.jpg' : '/profile.jpg'} className="m-auto rounded-4xl border-2 border-(--background)" />
           </div>
         </div>
         <div className="flex flex-col gap-2 p-2">
