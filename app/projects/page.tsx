@@ -10,7 +10,7 @@ const projectList = [
   {
     'title': 'This page (jp54.dev)',
     'description': 'My personal protfolio page',
-    'link': 'https://jp54.dev',
+    'link': 'https://github.com/jpatrick5402/jp54.dev',
   },
   {
     'title': '.dotfiles',
