@@ -39,11 +39,11 @@ export default function Laptop({ showHannah, showNylah }: LaptopProps) {
                 {
                   showHannah ?
                     <div className="relative">
-                      <Image src='/gallery/engagement.jpg' alt='Hannah' width={0} height={0} style={{ width: '330px', height: 'auto', margin: 'auto' }} sizes="100vw" />
+                      <Image src={'/gallery/hannah.jpg'} alt='Hannah' width={0} height={0} style={{ width: '160px', height: 'auto', margin: 'auto' }} sizes="100vw" />
                     </div>
                     : showNylah ?
                       <div className="relative">
-                        <Image src='/gallery/nylah.jpg' alt='Nylah' width={0} height={0} style={{ width: '225px', height: 'auto', margin: 'auto' }} sizes="100vw" />
+                        <Image src={'/gallery/nylah.jpg'} alt='Nylah' width={0} height={0} style={{ width: '225px', height: 'auto', margin: 'auto' }} sizes="100vw" />
                       </div>
                       : <>
                         <h1 className={`text-center text-7xl ${hovered ? 'text-(--text-accent)' : 'text-black'}`} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>Joseph</h1>

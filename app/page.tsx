@@ -11,10 +11,31 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, ContactShadows, OrbitControls } from '@react-three/drei'
 import Laptop from '@components/Laptop'
 import Loader from '@components/Loader';
+import { redirect } from "next/navigation";
 
 export default function Home() {
   const [showNylah, setShowNylah] = useState(false);
   const [showHannah, setShowHannah] = useState(false);
+
+  function toggleHannah() {
+    if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      redirect('/photos')
+    } else {
+      setShowHannah(true);
+      setShowNylah(false);
+      document.getElementById('laptop')?.scrollIntoView();
+    }
+  }
+
+  function toggleNylah() {
+    if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      redirect('/photos')
+    } else {
+      setShowNylah(true);
+      setShowHannah(false);
+      document.getElementById('laptop')?.scrollIntoView();
+    }
+  }
 
   return (
     <div>
@@ -23,7 +44,7 @@ export default function Home() {
           <div className="w-full m-auto p-2">
             <Image alt="Profile Picture" width={400} height={400} src='/profile.jpg' className="m-auto rounded-4xl border-2 border-(--background)" />
           </div>
-          <div style={{ width: '100%', height: '40vh' }} className="flex w-full m-auto items-center justify-center">
+          <div id="laptop" style={{ width: '100%', height: '40vh' }} className="flex w-full m-auto items-center justify-center">
             <Canvas camera={{ position: [0, 0, -15], fov: 55 }}>
               <Suspense fallback={<Loader />}>
                 <pointLight position={[10, 10, 10]} intensity={1.5} />
@@ -44,9 +65,9 @@ export default function Home() {
             </p>
             <p className="p-2 m-auto inline flex flex-col bg-(--background) rounded-sm">
               Hi there, my name is Joseph, and if you couldn&apos;t tell, I like working with software and computers. I was raised in Texas but moved to the northeastern U.S. shortly after high school. I&apos;m hapilly married to the love of my life,&nbsp;
-              <button onClick={() => { setShowHannah(true); setShowNylah(false); window.scrollTo(0, 0); }} className="underline">Hannah</button>
+              <button onClick={toggleHannah} className="underline">Hannah</button>
               , and I have a cat named&nbsp;
-              <button onClick={() => { setShowNylah(true); setShowHannah(false); window.scrollTo(0, 0); }} className="underline">Nylah</button>.
+              <button onClick={toggleNylah} className="underline">Nylah</button>.
             </p>
           </div>
           <div className="flex flex-col m-auto mb-6">

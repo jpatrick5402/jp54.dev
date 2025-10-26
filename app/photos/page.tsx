@@ -12,6 +12,11 @@ const galleryIndex = [
     image: '/gallery/mountain.jpg'
   },
   {
+    date: '5/28/23',
+    text: 'My lovely wife Hannah',
+    image: '/gallery/hannah.jpg'
+  },
+  {
     date: '5/27/23',
     text: 'My wife and I during our engagement photos',
     image: '/gallery/engagement.jpg'
