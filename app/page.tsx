@@ -65,9 +65,9 @@ export default function Home() {
             </p>
             <p className="p-2 m-auto inline flex flex-col bg-(--background) rounded-sm">
               Hi there, my name is Joseph, and if you couldn&apos;t tell, I like working with software and computers. I was raised in Texas but moved to the northeastern U.S. shortly after high school. I&apos;m hapilly married to the love of my life,&nbsp;
-              <button onClick={toggleHannah} className="underline">Hannah</button>
+              <button onClick={toggleHannah} className="underline cursor-help">Hannah</button>
               , and I have a cat named&nbsp;
-              <button onClick={toggleNylah} className="underline">Nylah</button>.
+              <button onClick={toggleNylah} className="underline cursor-help">Nylah</button>.
             </p>
           </div>
           <div className="flex flex-col m-auto mb-6">
