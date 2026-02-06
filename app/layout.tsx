@@ -23,10 +23,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className="bg-(--background)">
       <body className={`flex flex-col ${jetbrains.className} antialiased`}>
         <Nav />
-        <video id="bg-video" autoPlay muted loop className="fixed blur-sm object-cover h-full w-full">
-          <source src="/typing.mp4" type="video/mp4" />
-          Your browser does not support the video tag
-        </video>
         <div className="z-0">
           {children}
         </div>

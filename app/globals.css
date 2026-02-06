@@ -2,6 +2,8 @@
 
 :root {
   --background: #e2e2e2;
+  --nav-background: #1b1b1b;
+  --photo-background: #484848;
   --foreground: #171717;
   --text-accent: #2C92A5;
 }
@@ -20,14 +22,11 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
+html {
+  background-color: var(--background);
 }
 
-#bg-video {
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    pointer-events: none;
+body {
+  background-color: var(--background);
+  color: var(--foreground);
 }
