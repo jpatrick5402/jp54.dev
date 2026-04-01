@@ -28,6 +28,11 @@ const projectList = [
     'link':'https://github.com/jpatrick5402/NIDS',
   },
   {
+    'title': 'Binary File Editor',
+    'description': 'View hex, binary, ASCII data in your terminal',
+    'link':'https://github.com/jpatrick5402/Bits',
+  },
+  {
     'title': '.dotfiles',
     'description': 'A repo containing configurations I use for my systems',
     'link': 'https://github.com/jpatrick5402/.dotfiles',
