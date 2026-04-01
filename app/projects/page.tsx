@@ -13,6 +13,11 @@ const projectList = [
     'link': 'https://github.com/jpatrick5402/jp54.dev',
   },
   {
+    'title': 'PAWS',
+    'description': 'Automated food and water dispensor for your pets',
+    'link':'https://github.com/jpatrick5402/PAWS',
+  },
+  {
     'title': '.dotfiles',
     'description': 'A repo containing configurations I use for my systems',
     'link': 'https://github.com/jpatrick5402/.dotfiles',
