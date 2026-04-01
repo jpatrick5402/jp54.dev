@@ -18,6 +18,11 @@ const projectList = [
     'link':'https://github.com/jpatrick5402/PAWS',
   },
   {
+    'title': 'Embedded Web Sever',
+    'description': 'A website being run from a microcontroller (HTML, CSS, and JS)',
+    'link':'https://github.com/jpatrick5402/Embedded-Web-Server',
+  },
+  {
     'title': 'Packet Scanner',
     'description': 'Barebones terminal-based packet scanner',
     'link':'https://github.com/jpatrick5402/NIDS',
