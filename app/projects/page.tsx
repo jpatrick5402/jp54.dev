@@ -18,6 +18,11 @@ const projectList = [
     'link':'https://github.com/jpatrick5402/PAWS',
   },
   {
+    'title': 'Packet Scanner',
+    'description': 'Barebones terminal-based packet scanner',
+    'link':'https://github.com/jpatrick5402/NIDS',
+  },
+  {
     'title': '.dotfiles',
     'description': 'A repo containing configurations I use for my systems',
     'link': 'https://github.com/jpatrick5402/.dotfiles',
