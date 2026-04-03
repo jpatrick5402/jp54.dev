@@ -1,4 +1,6 @@
+'use client'
 import Image from "next/image";
+import { useState } from "react";
 
 const galleryIndex = [
   {
@@ -29,6 +31,9 @@ const galleryIndex = [
 ]
 
 export default function Photos() {
+
+  const [loading, setLoading] = useState(true);
+
   return (
     <div className="m-auto">
       <div className="flex flex-wrap gap-6 p-2 justify-center">
@@ -36,7 +41,12 @@ export default function Photos() {
           return (
             <div className="flex flex-col gap-2 justify-center items-center" key={index}>
               <div className="relative max-w-[30vw] min-w-[300px]">
-                <Image src={item.image} alt={'photo of ' + item.text} width={0} height={0} style={{ width: '100%', height: 'auto', borderTopLeftRadius: '10px', borderTopRightRadius: '10px', border: '2px solid var(--photo-background)' }} sizes="100vw" />
+                {loading && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="h-8 w-8 animate-spin rounded-full border-4 border-blue-500 border-t-transparent"></div>
+                  </div>
+                )}
+                <Image src={item.image} alt={'photo of ' + item.text} width={0} height={0} style={{ width: '100%', height: 'auto', borderTopLeftRadius: '10px', borderTopRightRadius: '10px', border: '2px solid var(--photo-background)' }} sizes="100vw" onLoad={() => setLoading(false)}/>
                 <div className="flex bg-(--photo-background) p-2 text-center rounded-b-xl">
                   <p className="m-auto">{item.date + ' ' + item.text}</p>
                 </div>
