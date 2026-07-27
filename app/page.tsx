@@ -75,7 +75,7 @@ export default function Home() {
               <FaLaptopCode className="flex mt-auto mb-auto" />
             </p>
             <p className="p-2 m-auto flex bg-(--background) rounded-sm">
-              I received my Bachelors of Science in Computer Science and Cybersecurity from Liberty University in 2025 as summa cum laude (honors student). I&apos;m currently a Service Desk Technician III for URMC where I work on large projects and solve technical challenges to support healtcare for my organization. I&apos;m looking to move into software engineering or system administration work.
+              I received my Bachelors of Science in Computer Science and Cybersecurity from Liberty University in 2025 as summa cum laude (honors student). I&apos;m currently an Application Administrator for URMC where I work on large projects and solve technical challenges to support healtcare for my organization. I&apos;m looking to move into software engineering or system administration work.
             </p>
           </div>
           <div className="flex flex-col m-auto mb-6">
